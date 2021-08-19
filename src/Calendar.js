@@ -4,7 +4,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interaction from '@fullcalendar/interaction';
 import dayGridView  from '@fullcalendar/daygrid';
 const axios = require('axios').default;
-const backendURL = "http://localhost:2022"
+const backendURL = "https://init-meetingscheduler.herokuapp.com/"
 let headers = new Headers()
             headers.append('Content-Type', 'application/json');
             headers.append('Accept', 'application/json');
