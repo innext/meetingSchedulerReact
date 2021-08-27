@@ -34,7 +34,7 @@ class Table extends Component {
     
     render() {
         return (
-            <div className="ag-theme-balham" style={{ height: '500px', width: '600px' }} >
+            <div className="ag-theme-balham ag-list-item.ag-active-item" style={{ height: '400px', width: '100%' }} >
                 <AgGridReact  
                     columnDefs={this.state.columnDefs}
                     rowData={this.state.rowData}
