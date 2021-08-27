@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interaction from '@fullcalendar/interaction';
-import dayGridView  from '@fullcalendar/daygrid';
 const axios = require('axios').default;
-const backendURL = "https://init-meetingscheduler.herokuapp.com/"
+//const backendURL = "https://init-meetingscheduler.herokuapp.com/"
+const backendURL = "http://localhost:2022"
 let headers = new Headers()
             headers.append('Content-Type', 'application/json');
             headers.append('Accept', 'application/json');
@@ -24,9 +24,10 @@ class Calendar extends Component {
         axios.get(backendURL)
         .then(response => {
             this.setState({
-                events: response.data.data.map(event => {return ({title: event.title, startStr :event.startTime, endStr :event.endTime}) }),
+                events: response.data.data.map(event => {return (
+                    { title: event.title, start :event.startTime, end :event.endTime}
+                )}),
             })
-            console.log(this.state.events)
         })
         .catch(error => { return error})
     }
@@ -41,14 +42,14 @@ class Calendar extends Component {
                     </div>  
                 </div>  
                 <FullCalendar
-                    plugins={[ dayGridView ,timeGridPlugin, interaction]}
+                    plugins={[ timeGridPlugin, interaction ]}
                     weekends={false}
                     editable={true}
                     selectable={true}
                     events= {this.state.events}
-                    select={this.handleDateSelect}               
+                    select={this.handleDateSelect}
                     initialView="timeGridWeek"
-                />  
+                />
             </div>  
         )  
     }
