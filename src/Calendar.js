@@ -3,8 +3,8 @@ import FullCalendar from "@fullcalendar/react";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interaction from '@fullcalendar/interaction';
 const axios = require('axios').default;
-//const backendURL = "https://init-meetingscheduler.herokuapp.com/"
-const backendURL = "http://localhost:2022"
+const backendURL = "https://init-meetingscheduler.herokuapp.com/"
+//const backendURL = "http://localhost:2022"
 let headers = new Headers()
             headers.append('Content-Type', 'application/json');
             headers.append('Accept', 'application/json');
