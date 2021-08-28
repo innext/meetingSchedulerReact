@@ -3,7 +3,8 @@ import {AgGridReact} from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
 import 'ag-grid-community/dist/styles/ag-theme-balham.css';
 const axios = require('axios').default;
-const backendURL = "http://localhost:2022"
+const backendURL = "https://init-meetingscheduler.herokuapp.com/"
+//const backendURL = "http://localhost:2022"
 
 class Table extends Component {
     constructor(props) {
