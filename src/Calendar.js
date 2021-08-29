@@ -4,7 +4,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import interaction from '@fullcalendar/interaction';
 const axios = require('axios').default;
 const backendURL = "https://init-meetingscheduler.herokuapp.com/";
-const baseURL = "https://init-meetingschedulerreact.herokuapp.com/";
+const baseURL = "https://jolly-keller-8dfa48.netlify.app/";
 //const backendURL = "http://localhost:2022";
 //const baseURL = "http://localhost:3000";
 
