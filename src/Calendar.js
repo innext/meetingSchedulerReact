@@ -25,7 +25,7 @@ class Calendar extends Component {
         axios.get(backendURL)
         .then(response => {
             this.setState({
-                events: response.data.data.map(event => {console.log(event); return (
+                events: response.data.data.map(event => {return (
                     { title: event.title, start :event.startTime, end :event.endTime}
                 )}),
             })
