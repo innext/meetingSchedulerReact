@@ -48,6 +48,7 @@ class Calendar extends Component {
                     editable={true}
                     selectable={true}
                     events= {this.state.events}
+                    selectLongPressDelay={1}
                     select={this.handleDateSelect}
                     initialView="timeGridWeek"
                 />
